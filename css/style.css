@@ -1,0 +1,76 @@
+:root {
+  /* COLORS */
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
+
+  /* FONTS */
+  --font-family: 'Outfit', sans-serif;
+  --font-size-default: 1.5rem;
+
+  /* BREAKPOINTS */
+  --bp-large: 1440px;
+  --bp-small: 375px;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%; /* 10px/16px*100 = 62.5% */
+}
+
+body {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-size: var(--font-size-default);
+  background-color: var(--light-gray);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-component {
+  border-radius: 2rem;
+  max-width: 345px;
+  padding: 1.5rem;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.image__photo {
+  border-radius: 1rem;
+  display: block;
+  width: 100%;
+}
+
+.description {
+  padding: 2rem;
+}
+
+.description__title {
+  padding-bottom: 1.5rem;
+  font-size: 2.1rem;
+  color: var(--dark-blue);
+}
+
+.description__text {
+  color: var(--grayish-blue);
+}
+
+@media screen and (max-width: 375px) {
+  .content {
+    padding: 2rem;
+  }
+}
